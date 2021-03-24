@@ -17,7 +17,7 @@ public class EntryPoint extends Application {
     	
     	Model model = new Model();
     	FXMLController controller;
-    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));  	
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));
     	
         Parent root = loader.load();
         

@@ -1,30 +1,39 @@
 package it.polito.tdp.spellchecker.model;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Stream;
+
+import it.polito.tdp.spellchecker.FXMLController;
 
 public class Dictionary {
 	
-	public List<RichWord> dictionary = new ArrayList<RichWord>();
+	public List<String> listaParole = new ArrayList<String>();
+	File newFile;
 	
-	public void loadDictionary(String language) {
+	public void loadDictionary(String language) throws FileNotFoundException {
 
 		language += ".txt";
 		
 		try { 
-			 FileReader fr = new FileReader(language); 
+			 newFile = new File("src/main/resources",language);
+			 FileReader fr = new FileReader(newFile); 
 			 BufferedReader br = new BufferedReader(fr); 
 			 String word; 
+			 
 			 while ((word = br.readLine()) != null) {
-				 RichWord rWord = new RichWord(word);
-				 this.dictionary.add(rWord);
-		} br.close(); 
-			    
+				 this.listaParole.add(word);
+			 } 
+		br.close(); 			
 		} catch (IOException e){ 
-		System.out.println("Errore nella lettura del file");  }   
+			throw new FileNotFoundException("Selezionare una lingua");
+		}   
 	}
 
 }

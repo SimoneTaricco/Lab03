@@ -48,7 +48,7 @@
             <TextArea fx:id="resultArea" editable="false" prefHeight="200.0" prefWidth="378.0" />
             <HBox prefHeight="37.0" prefWidth="378.0">
                <children>
-                  <Text fx:id="numberOfErrorsTxt" fill="#ea0d0d" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                  <Text fx:id="numberOfErrorsTxt" fill="#ea0d0d" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="183.7367559671402" />
                   <Button fx:id="clearTextBtn" mnemonicParsing="false" onAction="#doClearCheck" prefHeight="26.0" prefWidth="81.0" text="Clear Text">
                      <HBox.margin>
                         <Insets left="10.0" />

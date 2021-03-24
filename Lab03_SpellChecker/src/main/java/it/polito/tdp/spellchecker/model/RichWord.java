@@ -6,9 +6,9 @@ public class RichWord {
 	private boolean correct;
 	
 	
-	public RichWord(String word) {
-		super();
+	public RichWord(String word,boolean correct) {
 		this.word = word;
+		this.correct = correct;
 	}
 
 
